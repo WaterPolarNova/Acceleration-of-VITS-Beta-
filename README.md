@@ -1,16 +1,9 @@
 # Lightweight and High-Fidelity End-to-End Text-to-Speech with Multi-Band Generation and Inverse Short-Time Fourier Transform
-### Masaya Kawamura, Yuma Shirahata, Ryuichi Yamamoto, Kentaro Tachibana
-We propose a lightweight end-to-end text-to-speech model using multi-band generation and inverse short-time Fourier transform. Our model is based on VITS, a high-quality end-to-end text-to-speech model, but adopts two changes for more efficient inference: 1) the most computationally expensive component is partially replaced with a simple inverse short-time Fourier transform, and 2) multi-band generation, with fixed or trainable synthesis filters, is used to generate waveforms. Unlike conventional lightweight models, which employ optimization or knowledge distillation separately to train two cascaded components, our method enjoys the full benefits of end-to-end optimization. Experimental results show that our model synthesized speech as natural as that synthesized by VITS, while achieving a real-time factor of 0.066 on an Intel Core i7 CPU, 4.1 times faster than VITS. Moreover, a smaller version of the model significantly outperformed a lightweight baseline model with respect to both naturalness and inference speed. Code and audio samples are available from [https://github.com/MasayaKawamura/MB-iSTFT-VITS](https://github.com/MasayaKawamura/MB-iSTFT-VITS).
+### *This project is for reference only. Please refer to the original paper and the original project for details.*
 
-You can check the [paper](https://arxiv.org/abs/2210.15975) and [demo page](https://masayakawamura.github.io/Demo_MB-iSTFT-VITS/).
+## Original Paper Address
+- https://arxiv.org/pdf/2210.15975.pdf
 
-
-<img src="./fig/proposed_model.png" width="100%">
-
-## Multi-band iSTFT VITS and multi-stream iSTFT VITS 
-This repository is based on **[official VITS code](https://github.com/jaywalnut310/vits.git)**.<br>
-You can train the iSTFT-VITS, multi-band iSTFT VITS (MB-iSTFT-VITS), and multi-stream iSTFT VITS (MS-iSTFT-VITS) using this repository.<br>
-We also provide the [pretrained models](https://drive.google.com/drive/folders/1CKSRFUHMsnOl0jxxJVCeMzyYjaM98aI2?usp=sharing).
 ### 1. Pre-requisites
 
 0. Python >= 3.6
@@ -48,3 +41,5 @@ After the training, you can check inference audio using [inference.ipynb](infere
 - https://github.com/jaywalnut310/vits.git
 - https://github.com/rishikksh20/iSTFTNet-pytorch.git
 - https://github.com/rishikksh20/melgan.git
+- https://github.com/CjangCjengh/tacotron2-japanese.git
+- https://github.com/wind4000/vits.git
