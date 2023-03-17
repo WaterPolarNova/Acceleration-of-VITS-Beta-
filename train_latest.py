@@ -14,11 +14,6 @@ from torch.nn.parallel import DistributedDataParallel as DDP
 from torch.cuda.amp import autocast, GradScaler
 from pqmf import PQMF
 
-import librosa
-import logging
-
-logging.getLogger('numba').setLevel(logging.WARNING)
-
 import commons
 import utils
 from data_utils import (
